@@ -1,0 +1,42 @@
+.box {
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+    display: block;
+}
+
+.redColor {
+    background-color: red;
+}
+
+.greenColor {
+    background-color: green;
+}
+
+.yellowColor {
+    background-color: yellow;
+}
+
+.blackColor {
+    background-color: black;
+}
+
+.purpleColor {
+    background-color: purple;
+}
+
+.pinkColor {
+    background-color: pink;
+}
+
+.orangeColor {
+    background-color: orange;
+}
+
+.aquaColor {
+    background-color: aqua;
+}
+
+.brownColor {
+    background-color: brown;
+}
