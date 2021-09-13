@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--
+TODO:
+1.Enter your name in h1 and designation in h3
+2.Replace all the placeholder images with suitable images of the same size reflecting you and your projects.Feel free to use the sample images provided
+3.Replace the content of headings App1,App2,App3,App4 with suitable headings of your projects & provide their github links in the corresponding links
+4.Make all the elements in the page responsive & align its content as shown in the output sample with the aforementioned using bootstrap
+
+-->
+
+<html lang="en">
+<head>
+    <title>RWD Task</title>
+    <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+    <!-- Bootstrap CSS and task2.css   -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
+    <link href="task2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container" style="margin-top: 5vh">
+        <!-- Row containing profile Img, name and designation   -->
+        <div class="row">
+            <div class="col-xs-4"><img alt="Profile" class="img-responsive" src="Images/Image0.jpg"></div>
+            <div class="col-xs-8 text-right textColor" style="margin-top: 26px">
+                <h1>Vineeth Reddy</h1>
+                <h3 style="margin-top: 0px">Software Engineer</h3>
+            </div>
+        </div>
+        <!--  Horizontal Line  -->
+        <hr style="border: 1px solid #bcbbbb;">
+        <!-- Featured Work and the Main image -->
+        <div>
+            <img alt="MainImg" class="img-responsive" style="width: 100%;max-height: 400px" src="Images/Image5.jpeg">
+        </div>
+        <div>
+            <h2 style="color: #bcbbbb">Featured Work</h2>
+        </div>
+        <!-- Row contains the project details which include Project image, name and clickable github link  -->
+        <div class="row textColor">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+                <img alt="Project1" class="img-responsive projectImg" src="Images/Image1.jpg">
+                <h3>Fly High</h3>
+                <p><a href="https://github.com/VINEETHREDDYSHERI/Fly-HIgh">https://github.com/VINEETHREDDYSHERI/Fly-HIgh</a></p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+                <img alt="Project2" class="img-responsive projectImg" src="Images/Image2.jpg">
+                <h3>Driver Alert System</h3>
+                <p><a href="https://github.com/VINEETHREDDYSHERI/Driver-Alert-System">https://github.com/VINEETHREDDYSHERI/Driver-Alert-System</a></p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+                <img alt="Project3" class="img-responsive projectImg" src="Images/Image3.png">
+                <h3>ClassRoom Dynamics</h3>
+                <p><a href="https://github.com/VINEETHREDDYSHERI/ClassRoom-Dynamics">https://github.com/VINEETHREDDYSHERI/ClassRoom-Dynamics</a></p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+                <img alt="Project4" class="img-responsive projectImg" src="Images/Image4.jpg">
+                <h3>Emotion based Music</h3>
+                <p><a href="https://github.com/VINEETHREDDYSHERI/EmotionMusic">https://github.com/VINEETHREDDYSHERI/EmotionMusic</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

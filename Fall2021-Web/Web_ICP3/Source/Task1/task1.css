@@ -1,0 +1,28 @@
+.root{
+    background-color: lightskyblue;
+    font-family: Lato
+}
+
+.btn-background {
+    background-color: inherit;
+    outline: none;
+    border: none;
+}
+
+.img-size {
+    width: 100px;
+    height: 100px
+}
+
+.option-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-results {
+    height: 30vh;
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+}
