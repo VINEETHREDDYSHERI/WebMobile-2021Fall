@@ -43,7 +43,6 @@ $(document).ready(function () {
             //get the user's information and once api is completed will call Callback function
             getGithubInfo(username, function (response){
                 //if the response is successful show the user's details
-                console.log(response)
                 if (response.status == 200) {
                     showUser(JSON.parse(response.responseText));
                     //else display suitable message

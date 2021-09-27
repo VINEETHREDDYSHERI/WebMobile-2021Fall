@@ -1,0 +1,85 @@
+body {
+  color: #333333;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  background: #272030;
+}
+body .container {
+  padding: 0 15px;
+  left: 10vw;
+  right: 10vw;
+  margin-top: 5vh;
+  position: absolute;
+}
+body .container h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 24px;
+  color: cornflowerblue;
+}
+
+.countdown-input-container {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-input-container .countdown-input {
+  width: 220px;
+  margin-right: 10px;
+}
+
+.countdown-events {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countdown-event {
+  text-align: center;
+  max-width: 450px;
+  background-color: steelblue;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.countdown-event .timer-container {
+  display: flex;
+  color: white;
+}
+
+.event-name {
+  color: white;
+  text-transform: capitalize;
+  margin: 0px 0px 20px 0px;
+
+}
+
+.timer-container .border-right {
+  border-right: 1px solid white;
+  padding: 0px 24px;
+  border-right-style: outset;
+}
+
+.timer-container .counter-data {
+  font-size: 64px;
+  margin: 0px;
+}
+
+.countdown-event .counter-val {
+  text-transform: uppercase;
+  margin: 0px;
+  color: lightgray;
+  font-weight: bold;
+}
+
+.countdown-event .event-date-time{
+  font-size: 16px;
+  color: whitesmoke;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+</head>
+<body>
+<div class="container">
+  <h1>TO DO LIST FOR 2021</h1>
+  <!-- Todo Input TextField -->
+  <div class="todo-input">
+    <input type="text" id="toDoInput" placeholder="Enter To-do task"
+           [(ngModel)]="taskName" class="form-control todo-input-text">
+    <!--  The button will enabled only when the above textField contains value-->
+    <button (click)="submitNewItem()" class="btn btn-primary todo-btn"
+            [disabled]="!taskName || taskName===''">
+      Add Task
+    </button>
+  </div>
+  <!-- Displaying Todo List and option to delete and switch status between completed and pending-->
+  <ul class="todo-list">
+    <li class="todo-list-item" *ngFor="let item of items; index as i" (click)="completeItem(i)">
+      <div [ngClass]="{'item-num-completed': item.status === 'completed', 'item-num': true}">{{i + 1}}</div>
+      <p [ngClass]="{'item-name-completed': item.status === 'completed', 'item-name': true}">{{item.name}}</p>
+      <img [src]="item.status === 'pending' ? '../assets/trash-pending.svg' : '../assets/trash-completed.svg' "
+           (click)="deleteItem(i)" class="item-trash">
+    </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+</head>
+<body>
+<div class="container">
+  <h1>Event Countdown Timer</h1>
+  <!-- EventName and Date InputField -->
+  <div class="countdown-input-container">
+    <input type="text" placeholder="Enter Event name"
+           [(ngModel)]="eventName" class="form-control countdown-input">
+    <input type="datetime-local"
+           [(ngModel)]="eventDateTime" class="form-control countdown-input">
+    <!--  The button will enabled only when the above textField and dateField contains value-->
+    <button class="btn btn-primary" (click)="addEvent()"
+            [disabled]="!eventName || eventName==='' || !eventDateTime || eventDateTime===''">
+      Add Event
+    </button>
+  </div>
+  <!-- Displaying all the Events along with their Countdown Timers -->
+  <div class="countdown-events">
+    <div class="countdown-event" *ngFor="let event of eventCountDownList; index as i">
+      <h2 class="event-name">{{event.eventName}}</h2>
+      <!--  Countdown Timer  -->
+      <div class="timer-container">
+        <div class="border-right">
+          <p class="counter-data">{{calculatedTimerData[i].days}}</p>
+          <p class="counter-val">Days</p>
+        </div>
+        <div class="border-right">
+          <p class="counter-data">{{calculatedTimerData[i].hours}}</p>
+          <p class="counter-val">Hours</p>
+        </div>
+        <div class="border-right">
+          <p class="counter-data">{{calculatedTimerData[i].minutes}}</p>
+          <p class="counter-val">Minutes</p>
+        </div>
+        <div style="padding: 0px 24px">
+          <p class="counter-data">{{calculatedTimerData[i].seconds}}</p>
+          <p class="counter-val">Seconds</p>
+        </div>
+      </div>
+      <hr style="border-color: lightgray"/>
+      <!-- Using date pipe to display the event datetime in desired format. Example: June 21, 2021 -->
+      <p class="event-date-time">{{event.eventDateTime | date:'MMMM d, y'}}</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
