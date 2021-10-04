@@ -1,0 +1,77 @@
+<div class="parent-container">
+  <div class="child-container">
+    <h2 style="color: dodgerblue"><b>Search for Recipes and Restaurants!!
+    </b></h2><br>
+    <!-- Form to get the Recipe and Restaurant name from the User -->
+    <form>
+      <div class="form-group">
+        <div class="form-group col-lg-6 col-lg-offset-3 input-group">
+          <input #recipe class="form-control" style="max-width: 250px;margin-right: 50px" placeholder="Enter Recipe name" type="text">
+          <input #place class="form-control" style="max-width: 250px" placeholder="Enter City name or the Zip code" type="text">
+        </div>
+        <br>
+        <button (click)="getVenues()" class="btn btn-primary col-lg-2 col-lg-offset-5 " type="button">Search</button>
+      </div>
+    </form>
+  </div>
+</div><br><br>
+<div class="container">
+  <!-- Displaying the Recipe Details-->
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="panel panel-default col-6">
+        <div class="panel-heading"><b>Learn and Create your favourite food</b></div>
+        <div class="panel-body">
+          <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
+            <!-- Recipe Name and steps to prepare the searched food item -->
+            <div class="pull-left" style="max-width: 70%">
+              <a href="{{recipe.url}}" target="_blank">
+                <h4 class="list-group-item-heading">{{ recipe.label }}</h4>
+              </a>
+              <ul class="list">
+                <li class="list-item" *ngFor="let ingredient of recipe.ingredientLines">
+                  {{ingredient}}
+                </li>
+              </ul>
+            </div>
+            <!-- Food item image -->
+            <span class="pull-right">
+              <img src="{{recipe.image}}" style="width:140px; height: 140px;" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Displaying the Venue Details-->
+    <div class="col-lg-6">
+      <div class="panel panel-default col-6">
+        <div class="panel-heading"><b>The places to get your favourite item</b></div>
+        <div class="panel-body">
+          <div *ngFor="let venue of venueList" class="list-group-item clearfix">
+            <!-- Venue Name and Address -->
+            <div class="pull-left">
+              <h4 class="list-group-item-heading" style="color: #337ab7;">{{ venue.name }}</h4>
+              <p>
+                {{venue.location.formattedAddress[0]}}<br>
+                {{venue.location.formattedAddress[1]}}<br>
+                {{venue.location.formattedAddress[2]}}
+              </p>
+            </div>
+            <!-- Onclick of the Map, will route to map.google.com page and will display the direction from
+            current location to the selected venue-->
+            <span class="pull-right">
+              <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
+                &daddr={{venue.location.formattedAddress[0]}},{{venue.location.formattedAddress[1]}},{{venue.location.formattedAddress[2]}}"
+                target="_blank">
+               <img src="../../assets/google.png" style="width: 50px; height: 50px;">
+             </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
